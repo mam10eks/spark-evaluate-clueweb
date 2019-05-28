@@ -8,6 +8,7 @@ export SPARK_LOCAL_IP="10.141.0.14"
 export HADOOP_USER_NAME=kibi9872
 
 
+hdfs
 hdfs dfs -ls /user/${HADOOP_USER_NAME}
 
 #hadoop jar /opt/default-hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.1.jar pi 1000 1000
