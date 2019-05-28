@@ -8,11 +8,15 @@ export SPARK_LOCAL_IP="10.141.0.14"
 export HADOOP_USER_NAME=kibi9872
 
 
-hdfs
-hdfs dfs -ls /user/${HADOOP_USER_NAME}
+#hadoop fs -put pom.xml /user/${HADOOP_USER_NAME}/example_spark_input
+#hdfs dfs -ls /user/${HADOOP_USER_NAME}
+#hadoop fs -cat /user/${HADOOP_USER_NAME}/example_spark_input
 
 #hadoop jar /opt/default-hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.1.jar pi 1000 1000
 
 #mvn clean install
 
-#spark-submit --class de.webis.spark_cw09_tutorial.App target/spark-cw09-tutorial-1.0-SNAPSHOT.jar
+spark-submit --master local --class org.apache.spark.examples.SparkPi /opt/default-spark/examples/jars/spark-examples_2.11-2.4.3.jar 100
+
+#spark-submit --master local --class org.apache.spark.examples.SparkPi /opt/default-spark/examples/jars/spark-examples_2.11-2.4.3.jar 100
+

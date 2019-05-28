@@ -14,7 +14,7 @@ public class App
     {
     	try(JavaSparkContext context = new JavaSparkContext(context()))
     	{
-        	System.out.println(context.textFile("bla").<Integer>aggregate(0, (a,b) -> a+1, (a,b) -> a+b));	
+        	System.out.println(context.textFile("/user/kibi9872/exampl_spark_input").<Integer>aggregate(0, (a,b) -> a+1, (a,b) -> a+b));	
     	}
     }
     
